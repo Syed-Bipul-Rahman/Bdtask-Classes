@@ -7,140 +7,297 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="7dp"
-        app:cardElevation="15dp">
-
-        <LinearLayout
-            android:padding="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                android:text="Set Customize values"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/ap"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="15"
-                android:gravity="center"
-                android:hint="A+"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="15"
-                android:gravity="center"
-                android:hint="A"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/bp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="15"
-                android:gravity="center"
-                android:hint="B+"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="15"
-                android:gravity="center"
-                android:hint="B"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="15"
-                android:gravity="center"
-                android:hint="C"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/d"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="15"
-                android:gravity="center"
-                android:hint="D"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp" />
-
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_margin="20dp"
-        app:cardElevation="15dp"
-        app:cardCornerRadius="7dp"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_margin="20dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:textSize="25sp"
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Get your CGPA"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textAlignment="center" />
-
-            <EditText
-                android:id="@+id/usermark"
-                android:inputType="numberDecimal"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:ems="20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Enter your Mark" />
+                android:layout_margin="20dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="15dp">
 
-            <Button
-                android:id="@+id/checkresult"
-                android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:text="Set Customize values"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text="A+"
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+                        <EditText
+                            android:background="@drawable/inputbg"
+                            android:id="@+id/ap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:ems="15"
+                            android:gravity="center"
+                            android:hint="Value of A+"
+                            android:inputType="numberDecimal"
+                            android:minHeight="48dp"
+                            android:padding="5dp"
+                            android:textColor="@color/red" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text="A  "
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+                        <EditText
+                            android:background="@drawable/inputbg"
+
+                            android:textColor="@color/red"
+                            android:id="@+id/a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:ems="15"
+                            android:gravity="center"
+                            android:hint="Value of A+"
+                            android:inputType="numberDecimal"
+                            android:minHeight="48dp"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text="B+"
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+                        <EditText
+                            android:background="@drawable/inputbg"
+
+                            android:id="@+id/bp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:ems="15"
+                            android:gravity="center"
+                            android:hint="Value of A+"
+                            android:textColor="@color/red"
+                            android:inputType="numberDecimal"
+                            android:minHeight="48dp"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text="B  "
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+                        <EditText
+                            android:background="@drawable/inputbg"
+
+                            android:id="@+id/b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:ems="15"
+                            android:gravity="center"
+                            android:hint="Value of A+"
+                            android:textColor="@color/red"
+                            android:inputType="numberDecimal"
+                            android:minHeight="48dp"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text="C  "
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+                        <EditText
+                            android:background="@drawable/inputbg"
+
+                            android:id="@+id/c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:ems="15"
+                            android:gravity="center"
+                            android:hint="Value of A+"
+                            android:textColor="@color/red"
+                            android:inputType="numberDecimal"
+                            android:minHeight="48dp"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text="D  "
+
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+                        <EditText
+                            android:background="@drawable/inputbg"
+
+                            android:id="@+id/d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:ems="15"
+                            android:gravity="center"
+                            android:hint="Value of A+"
+                            android:textColor="@color/red"
+                            android:inputType="numberDecimal"
+                            android:minHeight="48dp"
+                            android:padding="5dp"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Check " />
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get your CGPA"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/usermark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ems="20"
+                        android:gravity="center"
+                        android:hint="Enter your Mark"
+                        android:inputType="numberDecimal"
+                        android:minHeight="48dp"
+                        android:textColor="@color/red"
+                        android:textColorHint="#757575" />
+
+                    <Button
+                        android:id="@+id/checkresult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/red"
+                        android:padding="10dp"
+                        android:shadowDx="10"
+                        android:shadowDy="10"
+                        android:shadowRadius="30"
+                        android:text="Check CGPA"
+                        android:textAllCaps="false"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
+    </ScrollView>
 
 </LinearLayout>

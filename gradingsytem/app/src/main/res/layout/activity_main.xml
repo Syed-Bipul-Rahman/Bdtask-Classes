@@ -30,9 +30,9 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingTop="8dp"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp">
+                    android:paddingLeft="15dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="15dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -59,15 +59,25 @@
                             android:textColor="@color/red"
                             android:textSize="27dp" />
 
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text=":"
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
                         <EditText
-                            android:background="@drawable/inputbg"
                             android:id="@+id/ap"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Value of A+"
+                            android:hint="Last value of A+"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
                             android:padding="5dp"
@@ -89,20 +99,31 @@
                             android:textColor="@color/red"
                             android:textSize="27dp" />
 
-                        <EditText
-                            android:background="@drawable/inputbg"
+                        <TextView
 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text=":"
                             android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+
+                        <EditText
                             android:id="@+id/a"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Value of A+"
+                            android:hint="Last value of A"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
-                            android:padding="5dp" />
+                            android:padding="5dp"
+                            android:textColor="@color/red" />
 
                     </LinearLayout>
 
@@ -120,20 +141,31 @@
                             android:textColor="@color/red"
                             android:textSize="27dp" />
 
-                        <EditText
-                            android:background="@drawable/inputbg"
+                        <TextView
 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text=":"
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+
+                        <EditText
                             android:id="@+id/bp"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Value of A+"
-                            android:textColor="@color/red"
+                            android:hint="Last value of B+"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
-                            android:padding="5dp" />
+                            android:padding="5dp"
+                            android:textColor="@color/red" />
 
                     </LinearLayout>
 
@@ -151,20 +183,30 @@
                             android:textColor="@color/red"
                             android:textSize="27dp" />
 
-                        <EditText
-                            android:background="@drawable/inputbg"
+                        <TextView
 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text=":"
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+                        <EditText
                             android:id="@+id/b"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Value of A+"
-                            android:textColor="@color/red"
+                            android:hint="Last value of B"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
-                            android:padding="5dp" />
+                            android:padding="5dp"
+                            android:textColor="@color/red" />
 
                     </LinearLayout>
 
@@ -182,28 +224,39 @@
                             android:textColor="@color/red"
                             android:textSize="27dp" />
 
-                        <EditText
-                            android:background="@drawable/inputbg"
+                        <TextView
 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text=":"
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+
+                        <EditText
                             android:id="@+id/c"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Value of A+"
-                            android:textColor="@color/red"
+                            android:hint="Last value of C"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
-                            android:padding="5dp" />
+                            android:padding="5dp"
+                            android:textColor="@color/red" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:weightSum="2"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="2">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -215,21 +268,31 @@
                             android:textColor="@color/red"
                             android:textSize="27dp" />
 
-                        <EditText
-                            android:background="@drawable/inputbg"
+                        <TextView
 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:text=":"
+                            android:textColor="@color/red"
+                            android:textSize="27dp" />
+
+
+                        <EditText
                             android:id="@+id/d"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Value of A+"
-                            android:textColor="@color/red"
+                            android:hint="Last value of D"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
                             android:padding="5dp"
-                            />
+                            android:textColor="@color/red" />
 
                     </LinearLayout>
 
@@ -251,10 +314,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_margin="20dp"
+                    android:layout_margin="10dp"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingTop="15dp">
+                    android:paddingTop="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"

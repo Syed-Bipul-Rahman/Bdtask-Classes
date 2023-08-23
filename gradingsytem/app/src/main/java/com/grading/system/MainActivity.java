@@ -66,11 +66,89 @@ public class MainActivity extends AppCompatActivity {
             if (Integer.parseInt(userMark.getText().toString()) >= Integer.parseInt(ap.getText().toString())) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Result");
+                builder.setTitle("Congratulations");
                 builder.setMessage("Your Grade is A+");
                 builder.setPositiveButton("OK", (dialog, which) -> {
                     dialog.dismiss();
                 });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+            }else if (Integer.parseInt(userMark.getText().toString()) >= Integer.parseInt(a.getText().toString())) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Result");
+                builder.setMessage("Your Grade is A");
+                builder.setPositiveButton("OK", (dialog, which) -> {
+                    dialog.dismiss();
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+            }else if (Integer.parseInt(userMark.getText().toString()) >= Integer.parseInt(bp.getText().toString())) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Result");
+                builder.setMessage("Your Grade is B+");
+                builder.setPositiveButton("OK", (dialog, which) -> {
+                    dialog.dismiss();
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+            }else if (Integer.parseInt(userMark.getText().toString()) >= Integer.parseInt(b.getText().toString())) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Result");
+                builder.setMessage("Your Grade is B");
+                builder.setPositiveButton("OK", (dialog, which) -> {
+                    dialog.dismiss();
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+            }else if (Integer.parseInt(userMark.getText().toString()) >= Integer.parseInt(c.getText().toString())) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Result");
+                builder.setMessage("Your Grade is C");
+                builder.setPositiveButton("OK", (dialog, which) -> {
+                    dialog.dismiss();
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+            }else if (Integer.parseInt(userMark.getText().toString()) >= Integer.parseInt(d.getText().toString())) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Result");
+                builder.setMessage("Your Grade is D");
+                builder.setPositiveButton("OK", (dialog, which) -> {
+                    dialog.dismiss();
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+            }else if (Integer.parseInt(userMark.getText().toString()) < Integer.parseInt(d.getText().toString())) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Alas!");
+
+
+                builder.setMessage("You Are Failed");
+                builder.setPositiveButton("OK", (dialog, which) -> {
+                    dialog.dismiss();
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
             }
         }
 

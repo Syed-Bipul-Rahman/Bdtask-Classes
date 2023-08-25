@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.math.BigInteger;
+
 public class MainActivity extends AppCompatActivity {
     EditText getnumber;
     Button getfactorial;
@@ -32,10 +34,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 //geting number from user input and convert it to int
-
                 int x = Integer.parseInt(getnumber.getText().toString());
-
-                int getfact = getfactorials(x);
+                BigInteger getfact = getfactorials(x);
 
                 setresult.setText("Your factorial is : "+String.valueOf(getfact));
             }
@@ -44,13 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private int getfactorials(int num) {
+    private BigInteger getfactorials(int num) {
         // Base case: factorial of 0 or 1 is 1
         if (num == 0 || num == 1) {
-            return 1;
+            return BigInteger.ONE;
         }
 
         // Recursive case
-        return num * getfactorials(num - 1);
+        return BigInteger.valueOf(num).multiply(getfactorials(num - 1));
     }
 }

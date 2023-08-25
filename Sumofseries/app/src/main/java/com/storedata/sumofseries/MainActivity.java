@@ -44,10 +44,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculateSeries(int start, int diff, int last) {
-
+        // Initialize the sum to zero
+        int sum = 0;
         for (int i = start; i <= last; i += diff) {
-            sum += start + i * diff;
+            // Add i to the sum
+            sum += i;
         }
-        binding.viewtext.setText(String.valueOf(sum));
+        // Use a string format to display the sum
+        binding.viewtext.setText(String.format("The sum is %d", sum));
     }
 }

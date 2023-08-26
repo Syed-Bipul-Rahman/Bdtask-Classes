@@ -63,6 +63,20 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/setcustomvalues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:padding="10dp"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowRadius="30"
+                android:text="Set custom values"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -77,7 +79,7 @@
                             android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Last value of A+"
+                            android:hint="First value of A+"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
                             android:padding="5dp"
@@ -119,7 +121,7 @@
                             android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Last value of A"
+                            android:hint="First value of A"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
                             android:padding="5dp"
@@ -161,7 +163,7 @@
                             android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Last value of B+"
+                            android:hint="First value of B+"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
                             android:padding="5dp"
@@ -202,7 +204,7 @@
                             android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Last value of B"
+                            android:hint="First value of B"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
                             android:padding="5dp"
@@ -244,7 +246,7 @@
                             android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Last value of C"
+                            android:hint="First value of C"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
                             android:padding="5dp"
@@ -288,7 +290,7 @@
                             android:background="@drawable/inputbg"
                             android:ems="15"
                             android:gravity="center"
-                            android:hint="Last value of D"
+                            android:hint="First value of D"
                             android:inputType="numberDecimal"
                             android:minHeight="48dp"
                             android:padding="5dp"
@@ -296,67 +298,18 @@
 
                     </LinearLayout>
 
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="15dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingTop="8dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Get your CGPA"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/usermark"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:ems="20"
-                        android:gravity="center"
-                        android:hint="Enter your Mark"
-                        android:inputType="numberDecimal"
-                        android:minHeight="48dp"
-                        android:textColor="@color/red"
-                        android:textColorHint="#757575" />
-
                     <Button
-                        android:id="@+id/checkresult"
+                        android:id="@+id/setvalue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/red"
-                        android:padding="10dp"
-                        android:shadowDx="10"
-                        android:shadowDy="10"
-                        android:shadowRadius="30"
-                        android:text="Check CGPA"
-                        android:textAllCaps="false"
+                        android:layout_marginBottom="20dp"
+                        android:backgroundTint="@color/orange"
+                        android:text="Set"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

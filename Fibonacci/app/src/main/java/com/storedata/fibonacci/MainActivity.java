@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         StringBuilder result = new StringBuilder();
         int first = 0, second = 1;
-
+// loop for rows
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 result.append(first).append(" ");

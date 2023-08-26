@@ -27,9 +27,8 @@ public class ActivityResult extends AppCompatActivity {
 
         //change status bar color
         getWindow().setStatusBarColor(getResources().getColor(R.color.orange));
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_background));
 
-        //hinding status bar
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
 
         //if user click set custom values button then data will deleted from sharedpreferescess and

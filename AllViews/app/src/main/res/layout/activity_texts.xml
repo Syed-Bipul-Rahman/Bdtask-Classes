@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TextsActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:layout_height="wrap_content">
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="hint" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <EditText
+               android:id="@+id/editTextPhone"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="phone"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextNumberPassword"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="numberPassword"
+               android:minHeight="48dp" />
+
+           <TextView
+               android:id="@+id/textView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="TextView" />
+
+           <EditText
+               android:id="@+id/editTextTextPersonName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:inputType="textPersonName"
+               android:minHeight="48dp"
+               android:text="Name" />
+
+           <EditText
+               android:id="@+id/editTextTextPassword"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="textPassword"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextTextEmailAddress"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="textEmailAddress"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextTextPostalAddress"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="textPostalAddress"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextTextMultiLine"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:gravity="start|top"
+               android:hint="@string/app_name"
+               android:inputType="textMultiLine"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextTime"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="time"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextDate"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="date"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextNumber"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="number"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextNumberSigned"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="numberSigned"
+               android:minHeight="48dp" />
+
+           <EditText
+               android:id="@+id/editTextNumberDecimal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:hint="@string/app_name"
+               android:inputType="numberDecimal"
+               android:minHeight="48dp" />
+
+           <CheckedTextView
+               android:id="@+id/checkedTextView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="CheckedTextView" />
+       </LinearLayout>
+   </ScrollView>
+</LinearLayout>

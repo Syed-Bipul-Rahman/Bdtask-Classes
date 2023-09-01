@@ -51,25 +51,41 @@ public class ButtonsActivity extends AppCompatActivity {
                 int selectedbuttonid = radioGroup.getCheckedRadioButtonId();
 
                 if (selectedbuttonid == binding.radioButton.getId()) {
-
-                    binding.parenta.setBackgroundColor(ContextCompat.getColor(ButtonsActivity.this, R.color.redlight));
+                    binding.imageButton.setImageResource(R.drawable.surongo);
 
                 } else if (selectedbuttonid == binding.radioButto2.getId()) {
 
-                    binding.parenta.setBackgroundColor(ContextCompat.getColor(ButtonsActivity.this, R.color.green));
-
+                    binding.imageButton.setImageResource(R.drawable.jawan);
                 } else if (selectedbuttonid == binding.radioButton3.getId()) {
 
-                    binding.parenta.setBackgroundColor(ContextCompat.getColor(ButtonsActivity.this, R.color.greendark));
-
+                    binding.imageButton.setImageResource(R.drawable.hollywood);
                 } else if (selectedbuttonid == binding.radioButto4.getId()) {
 
-                    binding.parenta.setBackgroundColor(ContextCompat.getColor(ButtonsActivity.this, R.color.orangedark));
+                    binding.imageButton.setImageResource(R.drawable.robot);
+                } else if (selectedbuttonid == binding.radioButto5.getId()) {
 
+                    binding.imageButton.setImageResource(R.drawable.rosrar);
                 }
 
             }
         });
+
+
+        //toggglebutton
+        binding.toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b) {
+                    binding.parenta.setBackgroundColor(ContextCompat.getColor(ButtonsActivity.this, R.color.redlight));
+                    binding.toggleButton.setText("Green");
+                } else {
+                    binding.parenta.setBackgroundColor(ContextCompat.getColor(ButtonsActivity.this, R.color.greendark));
+                    binding.toggleButton.setText("Red");
+                }
+            }
+        });
+
 
     }
 }

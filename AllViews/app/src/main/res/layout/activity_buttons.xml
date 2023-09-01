@@ -12,8 +12,9 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="260dp"
+        android:layout_width="match_parent"
         android:layout_height="260dp"
+        android:layout_margin="20dp"
         app:cardCornerRadius="15dp">
 
         <ImageView
@@ -34,7 +35,14 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show checkbox" />
+
     <RadioGroup
+
         android:id="@+id/rradiogroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,32 +55,64 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+
             android:text="Dhallywood" />
 
         <RadioButton
             android:id="@+id/radioButto2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="Bollywood" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="Tollywood" />
 
         <RadioButton
             android:id="@+id/radioButto4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="Kollywood" />
 
         <RadioButton
             android:id="@+id/radioButto5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="Mollywood" />
     </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/idlinearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <CheckBox
+            android:id="@+id/check1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Robot 2.0" />
+
+        <CheckBox
+            android:id="@+id/check2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suronggo" />
+
+        <CheckBox
+            android:id="@+id/check3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priyotoma" />
+    </LinearLayout>
+
 
     <ToggleButton
         android:id="@+id/toggleButton"
@@ -80,11 +120,6 @@
         android:layout_height="wrap_content"
         android:text="ToggleButton" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="change background" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -92,6 +127,7 @@
         android:layout_height="wrap_content"
         android:baselineAlignBottom="true"
         android:clickable="true"
+        android:minHeight="32dp"
         app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
 
 </LinearLayout>

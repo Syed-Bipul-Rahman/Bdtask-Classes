@@ -42,7 +42,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
             case 1:
                 return "Search";
             case 2:
-                return "Empty";
+                return "Video";
             default:
                 return "";
         }

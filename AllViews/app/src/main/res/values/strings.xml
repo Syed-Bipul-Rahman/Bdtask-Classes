@@ -16,4 +16,26 @@
         <item>AB+</item>
         <item>AB-</item>
     </string-array>
+    <string-array name="programming_language">
+        <item>Python</item>
+        <item>PHP</item>
+        <item>Ruby</item>
+        <item>Java</item>
+        <item>Javascript</item>
+        <item>C</item>
+        <item>C++</item>
+        <item>Swift</item>
+        <item>C#</item>
+        <item>Rust#</item>
+        <item>Dart</item>
+        <item>Kotlin</item>
+        <item>Cobol</item>
+        <item>Fortan</item>
+        <item>Haskel</item>
+        <item>SQL</item>
+        <item>Scala</item>
+        <item>TyperScript</item>
+        <item>ada</item>
+
+    </string-array>
 </resources>

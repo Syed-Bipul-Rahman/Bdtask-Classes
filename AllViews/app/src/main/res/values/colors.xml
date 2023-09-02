@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="grayligth">#71C9C9C9</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#535050</color>
     <color name="green">#01BC07</color>
     <color name="greendark">#016744</color>
     <color name="reddark">#9B0000</color>

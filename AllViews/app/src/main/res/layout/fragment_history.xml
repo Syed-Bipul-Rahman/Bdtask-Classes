@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HistoryFragment">
 
 
-    <TextView
+    <VideoView
+        android:id="@+id/videoviewfr"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content" />
 
-</FrameLayout>
+
+    <!--    videoView = findViewById(R.id.videoVw);-->
+
+    <!--    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.bdvideo);-->
+    <!--    videoView.setVideoURI(uri); // Call setVideoURI on the videoView object, not VideoView class-->
+    <!--    MediaController mediaController = new MediaController(this);-->
+    <!--    videoView.setMediaController(mediaController);-->
+
+    <!--    videoView.start();-->
+</LinearLayout>

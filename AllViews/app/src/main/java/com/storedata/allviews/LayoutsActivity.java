@@ -25,10 +25,10 @@ public class LayoutsActivity extends AppCompatActivity {
 
         //adding data to listview
 
-        dataList.add(new ListViewModel(R.drawable.x, "Name 1", "Description 1"));
-        dataList.add(new ListViewModel(R.drawable.priyotoma, "Name 1", "Description 1"));
-        dataList.add(new ListViewModel(R.drawable.bdtask, "Name 1", "Description 1"));
-        dataList.add(new ListViewModel(R.drawable.bdtask, "Name 1", "Description 1"));
+        dataList.add(new ListViewModel(R.drawable.x, "Rahim", "hi how are you"));
+        dataList.add(new ListViewModel(R.drawable.priyotoma, "Karim", "what are you doing"));
+        dataList.add(new ListViewModel(R.drawable.hollywood, "Mofiz", "hello"));
+        dataList.add(new ListViewModel(R.drawable.jawan, "MD abul hosen", "whats up"));
 
         ListviewAdapter listviewAdapter = new ListviewAdapter(this, dataList);
         binding.listView.setAdapter(listviewAdapter);

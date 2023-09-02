@@ -14,7 +14,7 @@ import com.storedata.allviews.databinding.ActivityTextsBinding;
 public class TextsActivity extends AppCompatActivity {
     ActivityTextsBinding binding;
 
-    String[] text = {"Java","Javascript", "python", "rahim", "Karim", "ruby", "laravel", "PHP", "there", "is", "nothing", "knowladge", "challange", "clearly", "you", "are", "foolish"};
+    String[] text = {"Java", "Javascript", "python", "rahim", "Karim", "ruby", "laravel", "PHP", "there", "is", "nothing", "knowladge", "challange", "clearly", "you", "are", "foolish"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +25,8 @@ public class TextsActivity extends AppCompatActivity {
         setContentView(view);
 
 
-
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, text);
-       binding.multiAutoComplete.setAdapter(arrayAdapter);
+        binding.multiAutoComplete.setAdapter(arrayAdapter);
         binding.multiAutoComplete.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
         //  getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
@@ -76,7 +75,12 @@ public class TextsActivity extends AppCompatActivity {
                 binding.textView.setText("Please fill all fields");
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
             } else {
-                binding.textView.setText("Your Texts is: " + t1 + "\n" + t2 + "\n" + t3 + "\n" + t4 + "\n" + t5 + "\n" + t6 + "\n" + t7 + "\n" + t8 + "\n" + t9 + "\n" + t10 + "\n" + t11 + "\n" + t12 + "\n" + t13);
+                binding.textView.setText("Your Texts is: \n textInputEditText: " + t1 + "\n editTextPhone: " + t2
+                        + "\n editTextNumberPassword: " + t3 + "\n editTextTextPersonName: " + t4 + "\n editTextTextPassword: " +
+                        t5 + "\n editTextTextEmailAddress: " + t6 + "\n editTextTextPostalAddress: " + t7 + "\n editTextTextMultiLine: "
+                        + t8 + "\n editTextTime: " + t9 + "\n editTextDate: " + t10
+                        + "\n editTextNumber: " + t11 + "\n editTextNumberSigned " + t12 + "\n editTextNumberDecimal: "
+                        + t13);
 
             }
 

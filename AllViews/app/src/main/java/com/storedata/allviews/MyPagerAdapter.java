@@ -38,11 +38,11 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
         // Return the title of each tab
         switch (position) {
             case 0:
-                return "Call";
+                return "Spinner";
             case 1:
-                return "People";
+                return "Search";
             case 2:
-                return "History";
+                return "Empty";
             default:
                 return "";
         }

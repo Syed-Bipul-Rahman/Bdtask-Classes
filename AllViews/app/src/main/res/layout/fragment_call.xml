@@ -8,12 +8,29 @@
     android:orientation="vertical"
     tools:context=".CallFragment">
 
+    <ImageView
+        android:id="@+id/setimage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="20dp" />
+
     <TextView
         android:id="@+id/textViewCall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="This is the Call Fragment"
+        android:text="Select your Blood Group"
         android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/blood_group_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/bloodgroups"
+        android:padding="8dp"
+        android:spinnerMode="dropdown" />
 
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.classwork.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,9 +37,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyHolder> {
     public void onBindViewHolder(@NonNull Adapter.MyHolder holder, int position) {
         holder.recyclerImg.setImageResource(arrayList.get(position).getImage());
         holder.recyclerText.setText(arrayList.get(position).getName());
-
+        holder.rate.setText(arrayList.get(position).getRate());
         holder.linearLayout.setOnClickListener(v -> {
-            Toast.makeText(context, arrayList.get(position).getName().toString(), Toast.LENGTH_SHORT).show();
+
+
+            int image=arrayList.get(position).getImage();
+            String price=arrayList.get(position).getRate();
+            String name=arrayList.get(position).getName();
+
+            Intent intent=new Intent(context,DetailsActivity.class);
+            intent.putExtra("name",name);
+            intent.putExtra("price",price);
+            intent.putExtra("image",image);
+
+
+           context.startActivity(intent);
+
+
+           // Toast.makeText(context, arrayList.get(position).getName().toString(), Toast.LENGTH_SHORT).show();
         });
     }
 
@@ -50,7 +66,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyHolder> {
     public class MyHolder extends RecyclerView.ViewHolder {
 
         ImageView recyclerImg;
-        TextView recyclerText;
+        TextView recyclerText, rate;
         LinearLayout linearLayout;
 
         public MyHolder(@NonNull View itemView) {
@@ -58,6 +74,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyHolder> {
             recyclerImg = itemView.findViewById(R.id.recycle_img);
             recyclerText = itemView.findViewById((R.id.recycle_text));
             linearLayout = itemView.findViewById(R.id.linearlayout);
+
+            rate = itemView.findViewById(R.id.recycle_text_price);
+
 
         }
     }

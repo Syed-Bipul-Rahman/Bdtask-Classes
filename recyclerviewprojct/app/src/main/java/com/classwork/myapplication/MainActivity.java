@@ -44,9 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void recyclerData() {
         arrayList = new ArrayList<>();
-        arrayList.add(new Model(R.drawable.ic_splash, "This is simple text"));
-        arrayList.add(new Model(R.drawable.ic_splash, "This is simple text"));
-        arrayList.add(new Model(R.drawable.ic_splash, "This is simple text"));
+//        arrayList.add(new Model(R.drawable.ic_splash, "দেশি পাঙ্গাস মাছ"));
+//        arrayList.add(new Model(R.drawable.ic_splash, "সাগর কল"));
+//        arrayList.add(new Model(R.drawable.ic_splash, "সাগর কল"));
+
+        arrayList.add(new Model(R.drawable.oil, "soyabin", "100"));
+        arrayList.add(new Model(R.drawable.oil, "soyabin", "100"));
+
 
 
     }

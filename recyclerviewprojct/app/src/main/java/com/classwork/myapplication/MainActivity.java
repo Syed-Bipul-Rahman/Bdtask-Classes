@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         arrayList.add(new Model(R.drawable.oil, "সয়াবিন তেল", "মুল্যঃ ২১০ টাকা"));
 
-        arrayList.add(new Model(R.drawable.banana, "সাগর কল", "মুল্যঃ ৪০ টাকা"));
+        arrayList.add(new Model(R.drawable.banana, "সাগর কলা", "মুল্যঃ ৪০ টাকা"));
 
         arrayList.add(new Model(R.drawable.tomato, "পাকা টমেটো", "মুল্যঃ ১৬০ টাকা"));
         arrayList.add(new Model(R.drawable.orange, "বিদেশী কমলা", "মুল্যঃ ১৮০ টাকা"));

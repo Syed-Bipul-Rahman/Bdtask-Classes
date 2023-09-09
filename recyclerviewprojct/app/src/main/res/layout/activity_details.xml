@@ -39,8 +39,11 @@
 
         <ImageView
 
+            android:id="@+id/cardtop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+
             android:layout_weight="1"
             android:src="@drawable/ic_outline_add_shopping_cart_24" />
     </LinearLayout>
@@ -145,11 +148,12 @@
                         android:paddingLeft="10dp"
                         android:paddingTop="5dp"
                         android:paddingRight="10dp"
-                        android:paddingBottom="5dp">
+                        android:paddingBottom="5dp"
+                        android:weightSum="3">
 
 
                         <TextView
-
+                            android:id="@+id/decreasequantity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -157,10 +161,11 @@
                             android:paddingRight="10dp"
                             android:text="-"
                             android:textColor="@color/colorWhite"
-                            android:textSize="25sp" />
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
 
                         <TextView
-
+                            android:id="@+id/quantityofproduct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -171,7 +176,7 @@
                             android:textSize="17sp" />
 
                         <TextView
-
+                            android:id="@+id/increasequantity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -421,6 +426,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/orderhobe"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -444,6 +450,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/carthoeb"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

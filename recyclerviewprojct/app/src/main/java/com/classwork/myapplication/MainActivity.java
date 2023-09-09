@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //change status bar color
-//        getWindow().setStatusBarColor(R.color.themeColor);
+        getWindow().setStatusBarColor(getResources().getColor(themeColor));
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_background));
 
         recyclerData();
 

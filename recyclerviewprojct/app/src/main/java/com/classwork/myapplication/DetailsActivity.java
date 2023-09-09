@@ -15,5 +15,7 @@ public class DetailsActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
 
+
+
     }
 }

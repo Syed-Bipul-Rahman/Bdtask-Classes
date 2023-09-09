@@ -48,10 +48,15 @@ public class MainActivity extends AppCompatActivity {
 //        arrayList.add(new Model(R.drawable.ic_splash, "সাগর কল"));
 //        arrayList.add(new Model(R.drawable.ic_splash, "সাগর কল"));
 
-        arrayList.add(new Model(R.drawable.oil, "soyabin", "100"));
-        arrayList.add(new Model(R.drawable.oil, "soyabin", "100"));
 
+        arrayList.add(new Model(R.drawable.oil, "সয়াবিন তেল", "মুল্যঃ ২১০ টাকা"));
 
+        arrayList.add(new Model(R.drawable.banana, "সাগর কল", "মুল্যঃ ৪০ টাকা"));
+
+        arrayList.add(new Model(R.drawable.tomato, "পাকা টমেটো", "মুল্যঃ ১৬০ টাকা"));
+        arrayList.add(new Model(R.drawable.orange, "বিদেশী কমলা", "মুল্যঃ ১৮০ টাকা"));
+        arrayList.add(new Model(R.drawable.mango, "রাজশাহীর আম", "মুল্যঃ ১২০ টাকা"));
+        arrayList.add(new Model(R.drawable.fish, "দেশি পাঙ্গাস মাছ", "মুল্যঃ ১৫০ টাকা"));
 
     }
 }

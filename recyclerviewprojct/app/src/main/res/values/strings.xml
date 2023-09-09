@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">পুষ্পা বাজার</string>
+    <string name="product_name">পুষ্পা সয়াবিন তেল</string>
+    <string name="product_name2">দেশি পাঙ্গাস মাছ</string>
+    <string name="product_name3">বিদেশী কমলা</string>
+    <string name="product_name4"> টমেটো 😋</string>
+    <string name="product_name5">সাগর কলা</string>
+    <string name="product_name6">লাউ</string>
+    <string name="product_price">মুল্যঃ ১৬০ টাকা </string>
+    <string name="total_items">পরিমান(কেজি)</string>
+    <string name="my_cart_title">আমার কার্ট</string>
+    <string name="my_cart_total_money">সর্বমোট</string>
+    <string name="cart_taka">টাকা</string>
+    <string name="cart_order">অর্ডার</string>
 </resources>

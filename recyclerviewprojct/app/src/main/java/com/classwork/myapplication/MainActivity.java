@@ -1,9 +1,15 @@
 package com.classwork.myapplication;
 
+import static com.classwork.myapplication.R.color.themeColor;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -13,10 +19,14 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     Adapter recyclerAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //change status bar color
+//        getWindow().setStatusBarColor(R.color.themeColor);
 
         recyclerData();
 

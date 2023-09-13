@@ -4,25 +4,37 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.widget.Toast;
 
 public class NetworkChangeReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (isNetworkConnected(context)) {
-            Toast.makeText(context, "Connected to the internet", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(context, "Not connected to the internet", Toast.LENGTH_SHORT).show();
+        try {
+            if (isOnline(context)) {
+                Toast.makeText(context, "Network Available", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(context, "Network Not Available", Toast.LENGTH_LONG).show();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private boolean isNetworkConnected(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        if (cm != null) {
-            android.net.NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-            return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+    private boolean isOnline(Context context) {
+        try {
+            ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo networkInfo = cm.getActiveNetworkInfo();
+            return (networkInfo != null && networkInfo.isConnected());
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
-        return false;
+
+
     }
 }

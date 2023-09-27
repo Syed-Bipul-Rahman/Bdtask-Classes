@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -55,6 +56,17 @@ public class RecyclerAdapters extends RecyclerView.Adapter<RecyclerAdapters.View
         Picasso.get().load(imageUrl).into(holder.productimage);
 
 
+        //setonclick listener to linearlayout for sent id to products details page
+        holder.linearLayout.setOnClickListener(v -> {
+            Intent intentsent = new Intent(context, ProductDetails.class);
+            intentsent.putExtra("id", dataModels.get(position).getId() + "");
+            context.startActivity(intentsent);
+
+
+            //   Toast.makeText(context, "clicked on"+dataModels.get(position).getId(), Toast.LENGTH_SHORT).show();
+        });
+
+
     }
 
     @Override
@@ -65,7 +77,7 @@ public class RecyclerAdapters extends RecyclerView.Adapter<RecyclerAdapters.View
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView name, brand;
-        //LinearLayout linearLayout;
+        LinearLayout linearLayout;
         ImageView productimage;
 
         public ViewHolder(@NonNull View itemView) {
@@ -73,7 +85,7 @@ public class RecyclerAdapters extends RecyclerView.Adapter<RecyclerAdapters.View
             name = itemView.findViewById(R.id.productname);
             brand = itemView.findViewById(R.id.brandnamee);
             productimage = itemView.findViewById(R.id.productimage);
-
+            linearLayout = itemView.findViewById(R.id.productcontainer);
 
         }
     }

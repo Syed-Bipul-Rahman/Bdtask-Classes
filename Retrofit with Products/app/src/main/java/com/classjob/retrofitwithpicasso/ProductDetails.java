@@ -74,7 +74,7 @@ public class ProductDetails extends AppCompatActivity {
                     brand.setText(response.body().getBrand());
 
 
-                    price.setText(productPrice + "");
+                    price.setText("$"+productPrice);
                     desc.setText(response.body().getDescription());
 
                     //show image using picasso

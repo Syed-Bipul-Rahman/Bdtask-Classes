@@ -1,12 +1,14 @@
 package com.classjob.retrofitwithpicasso;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerAdapters dataAdapter;
     ApiInterface apiInterface;
     TextView error;
+    ProgressBar progressbar_home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
+        progressbar_home = findViewById(R.id.progressbar_home);
+
 
         Retrofit retrofit = ApiClient.getClient();
         apiInterface = retrofit.create(ApiInterface.class);
@@ -48,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ProductsResponse> call, Response<ProductsResponse> response) {
                 if (response.isSuccessful()) {
+
+                    progressbar_home.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
                     List<Product> products = response.body().getProducts();
                     setDataAdapter((ArrayList<Product>) products); // Call the method to set data
                 } else {

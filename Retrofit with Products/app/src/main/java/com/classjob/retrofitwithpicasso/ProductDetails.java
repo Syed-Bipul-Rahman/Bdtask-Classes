@@ -21,7 +21,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductDetails extends AppCompatActivity {
-    TextView name, brand, price, desc, categories, stock, totaltopay, ratingdetails;
+    TextView name, brand, price, desc, categories, stock, totaltopay, ratingdetails, productNameOnActionBar;
     ImageView productimage, back_arroworder;
     ApiInterface apiInterface;
     String id;
@@ -48,6 +48,7 @@ public class ProductDetails extends AppCompatActivity {
         totaltopay = findViewById(R.id.totaltopayprice);
         categories = findViewById(R.id.categorydetails);
         ratingdetails = findViewById(R.id.ratingdetails);
+        productNameOnActionBar = findViewById(R.id.productnametitlebar);
 
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
@@ -73,13 +74,28 @@ public class ProductDetails extends AppCompatActivity {
             public void onResponse(Call<Product> call, Response<Product> response) {
 
                 if (response.isSuccessful()) {
-//hide progress bar
+                    //hide progress bar
                     linearLayout.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.GONE);
+
                     //get price for conversion
                     double productPrice = response.body().getPrice();
+                    String productname = response.body().getTitle();
 
-                    name.setText(response.body().getTitle());
+
+                    //split product name 2 words
+                    String[] split = productname.split(" ");
+
+
+                    if (split.length > 2) {
+                        String firstWord = split[0];
+                        String secondWord = split[1];
+                        productNameOnActionBar.setText(firstWord + " " + secondWord);
+                    } else {
+                        productNameOnActionBar.setText(productname);
+                    }
+
+                    name.setText(productname);
                     brand.setText(response.body().getBrand());
                     categories.setText(response.body().getCategory());
                     stock.setText("Stock: " + response.body().getStock());

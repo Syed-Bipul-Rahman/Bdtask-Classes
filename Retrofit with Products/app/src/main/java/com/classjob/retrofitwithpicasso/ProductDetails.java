@@ -24,7 +24,7 @@ public class ProductDetails extends AppCompatActivity {
     TextView name, brand, price, desc, categories, stock, totaltopay, ratingdetails, productNameOnActionBar;
     ImageView productimage, back_arroworder;
     ApiInterface apiInterface;
-    String id;
+    String id, pronameint;
     ProgressBar progressBar;
     LinearLayout linearLayout;
 
@@ -52,8 +52,21 @@ public class ProductDetails extends AppCompatActivity {
 
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
+        pronameint = intent.getStringExtra("proname");
+
+//split product name 2 words
+        String[] split = pronameint.split(" ");
 
 
+        if (split.length > 2) {
+            String firstWord = split[0];
+            String secondWord = split[1];
+            productNameOnActionBar.setText(firstWord + " " + secondWord);
+        } else {
+            productNameOnActionBar.setText(pronameint);
+        }
+
+        //retrofit
         Retrofit retrofit = new Retrofit.Builder().baseUrl("https://dummyjson.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -82,18 +95,6 @@ public class ProductDetails extends AppCompatActivity {
                     double productPrice = response.body().getPrice();
                     String productname = response.body().getTitle();
 
-
-                    //split product name 2 words
-                    String[] split = productname.split(" ");
-
-
-                    if (split.length > 2) {
-                        String firstWord = split[0];
-                        String secondWord = split[1];
-                        productNameOnActionBar.setText(firstWord + " " + secondWord);
-                    } else {
-                        productNameOnActionBar.setText(productname);
-                    }
 
                     name.setText(productname);
                     brand.setText(response.body().getBrand());

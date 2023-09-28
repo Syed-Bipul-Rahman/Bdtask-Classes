@@ -8,14 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Retrofit;
@@ -63,6 +61,8 @@ public class RecyclerAdapters extends RecyclerView.Adapter<RecyclerAdapters.View
         holder.linearLayout.setOnClickListener(v -> {
             Intent intentsent = new Intent(context, ProductDetails.class);
             intentsent.putExtra("id", dataModels.get(position).getId() + "");
+            intentsent.putExtra("proname", dataModels.get(position).getTitle().toString());
+
             context.startActivity(intentsent);
 
 

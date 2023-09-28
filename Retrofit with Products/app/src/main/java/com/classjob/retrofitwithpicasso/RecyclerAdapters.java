@@ -39,7 +39,7 @@ public class RecyclerAdapters extends RecyclerView.Adapter<RecyclerAdapters.View
     @Override
     public RecyclerAdapters.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.gridlayout, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.product_item_layout, null);
 
         return new ViewHolder(view);
     }
@@ -47,10 +47,13 @@ public class RecyclerAdapters extends RecyclerView.Adapter<RecyclerAdapters.View
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapters.ViewHolder holder, int position) {
 
+        //convert price to int
+        double pricecon = dataModels.get(position).getPrice();
+        int intprice = (int) pricecon;
         holder.name.setText(dataModels.get(position).getTitle());
-        holder.brand.setText(dataModels.get(position).getBrand());
-
-
+        holder.productprice.setText("Price: " + intprice + " USD");
+        holder.stock.setText("Stock: " + dataModels.get(position).getStock());
+        holder.rating.setText("" + dataModels.get(position).getRating());
         //show image using picasso
         String imageUrl = dataModels.get(position).getThumbnail();
         Picasso.get().load(imageUrl).into(holder.productimage);
@@ -76,16 +79,19 @@ public class RecyclerAdapters extends RecyclerView.Adapter<RecyclerAdapters.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name, brand;
+        TextView name, productprice, rating, stock;
         LinearLayout linearLayout;
         ImageView productimage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.productname);
-            brand = itemView.findViewById(R.id.brandnamee);
+            productprice = itemView.findViewById(R.id.productprice);
             productimage = itemView.findViewById(R.id.productimage);
             linearLayout = itemView.findViewById(R.id.productcontainer);
+            rating = itemView.findViewById(R.id.productrating);
+            stock = itemView.findViewById(R.id.productstock);
+
 
         }
     }

@@ -26,13 +26,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductDetails extends AppCompatActivity {
-    TextView name, brand, price, desc, categories, stock, totaltopay, ratingdetails, productNameOnActionBar;
+    TextView name, brand, price, desc, categories, stock, totaltopay, ratingdetails, productNameOnActionBar, quantityIncrease, quantityDecrease, quantityshow;
     ImageView productimage, back_arroworder;
     ApiInterface apiInterface;
     String id, pronameint;
     ProgressBar progressBar;
     LinearLayout linearLayout;
     ImageSlider imageSlider;
+    double productPrice;
+    int defaultquantity = 1;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -50,6 +52,9 @@ public class ProductDetails extends AppCompatActivity {
         productimage = findViewById(R.id.imagesdetails);
         progressBar = findViewById(R.id.showloadin);
         imageSlider = findViewById(R.id.img_slid);
+        quantityDecrease = findViewById(R.id.decreaseQuantitybtn);
+        quantityIncrease = findViewById(R.id.increaseQuantitybtn);
+        quantityshow = findViewById(R.id.quantityTextview);
 
 
         linearLayout = findViewById(R.id.linearLayout);
@@ -90,6 +95,29 @@ public class ProductDetails extends AppCompatActivity {
             finish();
         });
 
+        quantityshow.setText(defaultquantity + "");
+        //increase decrease functionality
+//for increase
+        quantityIncrease.setOnClickListener(v -> {
+            defaultquantity += 1;
+            quantityshow.setText(defaultquantity + "");
+
+            productPrice *= defaultquantity;
+            totaltopay.setText("$" + productPrice);
+
+        });
+        //for decrease
+        quantityDecrease.setOnClickListener(v -> {
+            if (defaultquantity > 1) {
+                defaultquantity -= 1;
+                quantityshow.setText(defaultquantity + "");
+                productPrice *= defaultquantity;
+                totaltopay.setText("$" + productPrice);
+            }
+
+        });
+
+
     }
 
     private void getDetails() {
@@ -104,7 +132,7 @@ public class ProductDetails extends AppCompatActivity {
                     progressBar.setVisibility(View.GONE);
 
                     //get price for conversion
-                    double productPrice = response.body().getPrice();
+                    productPrice = response.body().getPrice();
                     String productname = response.body().getTitle();
 
 
@@ -134,7 +162,6 @@ public class ProductDetails extends AppCompatActivity {
                 } else {
                     Toast.makeText(ProductDetails.this, "Failed to fetch data", Toast.LENGTH_SHORT).show();
                 }
-//set all products
 
 
             }

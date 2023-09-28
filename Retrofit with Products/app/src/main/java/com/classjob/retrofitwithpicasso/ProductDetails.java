@@ -97,7 +97,7 @@ public class ProductDetails extends AppCompatActivity {
 
         quantityshow.setText(defaultquantity + "");
         //increase decrease functionality
-//for increase
+        //for increase
         quantityIncrease.setOnClickListener(v -> {
             defaultquantity += 1;
             quantityshow.setText(defaultquantity + "");
@@ -109,9 +109,9 @@ public class ProductDetails extends AppCompatActivity {
         //for decrease
         quantityDecrease.setOnClickListener(v -> {
             if (defaultquantity > 1) {
+                productPrice /= defaultquantity;
                 defaultquantity -= 1;
                 quantityshow.setText(defaultquantity + "");
-                productPrice *= defaultquantity;
                 totaltopay.setText("$" + productPrice);
             }
 

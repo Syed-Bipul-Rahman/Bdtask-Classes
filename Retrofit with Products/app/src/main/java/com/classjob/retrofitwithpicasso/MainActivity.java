@@ -2,11 +2,14 @@ package com.classjob.retrofitwithpicasso;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     ApiInterface apiInterface;
     TextView error;
     ProgressBar progressbar_home;
+    ConstraintLayout constraintLayoutloading;
+    ImageView allproductshow, categoryshow;
+    LinearLayout categoryitems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +37,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
         initializing();
+
+
+        //bydefaoult all product will show
         getdata();
+
+
+        //show category after click btn and them work respective users click
+        categoryshow.setOnClickListener(v -> {
+            categoryitems.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.GONE);
+
+            //   Toast.makeText(this, "Category", Toast.LENGTH_SHORT).show();
+        });
+
+        //handle after all product button
+        allproductshow.setOnClickListener(v -> {
+            getdata();
+            categoryitems.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.VISIBLE);
+
+        });
 
     }
 
@@ -41,8 +67,11 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         progressbar_home = findViewById(R.id.progressbar_home);
+        constraintLayoutloading = findViewById(R.id.progressbar_container);
 
-
+        allproductshow = findViewById(R.id.allproductshowbutn);
+        categoryshow = findViewById(R.id.categoryshowbutn);
+        categoryitems = findViewById(R.id.categoryitems);
         Retrofit retrofit = ApiClient.getClient();
         apiInterface = retrofit.create(ApiInterface.class);
     }
@@ -55,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
 
                     progressbar_home.setVisibility(View.GONE);
+                    constraintLayoutloading.setVisibility(View.GONE);
                     recyclerView.setVisibility(View.VISIBLE);
                     List<Product> products = response.body().getProducts();
                     setDataAdapter((ArrayList<Product>) products); // Call the method to set data

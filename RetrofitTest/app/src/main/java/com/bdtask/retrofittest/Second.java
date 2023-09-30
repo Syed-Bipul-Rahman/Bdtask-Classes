@@ -42,7 +42,7 @@ public class Second extends AppCompatActivity {
                 productTitle=response.body().getTitle();
                 //Log.d("GetAllProducts",new Gson().toJson(response.body().getTitle()));
 
-
+//https://youtu.be/TTZ6F1vHrHk?si=u-QTDlebkPJTyW8e
             }
 
             @Override

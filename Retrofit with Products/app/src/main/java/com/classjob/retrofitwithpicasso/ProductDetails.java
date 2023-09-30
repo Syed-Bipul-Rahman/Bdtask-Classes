@@ -1,6 +1,7 @@
 package com.classjob.retrofitwithpicasso;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,8 +27,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductDetails extends AppCompatActivity {
-    TextView name, brand, price, desc, categories, stock, totaltopay, ratingdetails, productNameOnActionBar, quantityIncrease, quantityDecrease, quantityshow;
-    ImageView productimage, back_arroworder;
+    TextView ordernow, addtocart, name, brand, price, desc, categories, stock, totaltopay, ratingdetails, productNameOnActionBar, quantityIncrease, quantityDecrease, quantityshow;
+    ImageView productimage, back_arroworder, gocart;
     ApiInterface apiInterface;
     String id, pronameint;
     ProgressBar progressBar;
@@ -55,6 +56,9 @@ public class ProductDetails extends AppCompatActivity {
         quantityDecrease = findViewById(R.id.decreaseQuantitybtn);
         quantityIncrease = findViewById(R.id.increaseQuantitybtn);
         quantityshow = findViewById(R.id.quantityTextview);
+        ordernow = findViewById(R.id.orderNow);
+        addtocart = findViewById(R.id.addToCart);
+        gocart = findViewById(R.id.gocartactivity);
 
 
         linearLayout = findViewById(R.id.linearLayout);
@@ -118,7 +122,29 @@ public class ProductDetails extends AppCompatActivity {
         });
 
 
+        //show dialogue
+        ordernow.setOnClickListener(v -> {
+            showAlert("Order has been successfully placed. You have to pay " + productPrice + "$ After receive the product.");
+        });
+        addtocart.setOnClickListener(v -> {
+            showAlert("Product Successfully added to your cart.");
+        });
+
+
     }
+
+    private void showAlert(String msg) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ProductDetails.this);
+        builder.setTitle("Success");
+        builder.setIcon(R.drawable.ic_baseline_check_circle_24);
+        builder.setMessage(msg);
+        builder.setPositiveButton("Ok", (dialog, which) -> {
+            dialog.dismiss();
+        });
+        builder.show();
+
+    }
+
 
     private void getDetails() {
         Call<Product> callAllProducts = apiInterface.getSingleProducts("products/" + id);

@@ -37,7 +37,7 @@
             android:textSize="20dp" />
 
         <ImageView
-
+            android:id="@+id/gocartactivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -432,7 +432,7 @@
 
 
                 <TextView
-
+                    android:id="@+id/orderNow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
@@ -455,7 +455,7 @@
 
 
                 <TextView
-
+                    android:id="@+id/addToCart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"

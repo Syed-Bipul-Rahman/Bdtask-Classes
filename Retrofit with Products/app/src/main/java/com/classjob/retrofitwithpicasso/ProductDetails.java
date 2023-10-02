@@ -141,6 +141,9 @@ public class ProductDetails extends AppCompatActivity {
         builder.setPositiveButton("Ok", (dialog, which) -> {
             dialog.dismiss();
         });
+        builder.setNegativeButton("Cancel", (dialog, which) -> {
+            dialog.dismiss();
+        });
         builder.show();
 
     }

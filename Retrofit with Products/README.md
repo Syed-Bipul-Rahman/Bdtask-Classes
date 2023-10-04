@@ -55,12 +55,12 @@ This is an open-source e-commerce app designed to provide users with a seamless 
 # Screenshots
 
 ### Homepage
-![Homepage](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg)
+ <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg" alt="Homepage" width="23%">
 
 
-### Details Activity
-![Homepage](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/details.jpg)
+### Product Details
+<img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/details.jpg" alt="Details" width="23%">
 
-### Category
-![Homepage](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/category.jpg)
+### Select Category
+<img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/category.jpg" alt="Category" width="23%">
 

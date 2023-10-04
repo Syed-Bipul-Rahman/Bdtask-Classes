@@ -4,14 +4,14 @@
 
 <div style="display: flex; justify-content: space-between;">
     <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg" alt="Homepage" width="23%">
-    <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg" alt="Homepage" width="23%">
-    <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg" alt="Homepage" width="23%">
+    <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/category.jpg" alt="Category" width="23%">
+    <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/details.jpg" alt="Details" width="23%">
 </div>
 
 
 # E-Commerce App
 
-![App Screenshots](screenshots.png)
+
 
 ## Table of Contents
 
@@ -42,11 +42,6 @@ This is an open-source e-commerce app designed to provide users with a seamless 
 - Email Notifications
 - Responsive Design
 
-# Screenshots
-
-### Homepage
-![Motorcycle](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/raw/master/Retrofit%20with%20Products/app/src/main/res/drawable/motorcycle.jpg)
-
 
 ## Technologies
 
@@ -55,4 +50,17 @@ This is an open-source e-commerce app designed to provide users with a seamless 
 - Android sdk
 - Java
 - Retrofit
+
+
+# Screenshots
+
+### Homepage
+![Homepage](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg)
+
+
+### Details Activity
+![Homepage](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/details.jpg)
+
+### Category
+![Homepage](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/category.jpg)
 

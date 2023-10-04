@@ -8,6 +8,8 @@
     <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/details.jpg" alt="Details" width="23%">
 </div>
 
+# Download from Release
+[![Download APK](https://img.shields.io/badge/Download-APK-blue.svg)](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/releases/download/Android/app-release.apk)
 
 # E-Commerce App
 

@@ -1,6 +1,12 @@
 # E-Shop
 
-![Motorcycle](https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/raw/master/Retrofit%20with%20Products/app/src/main/res/drawable/motorcycle.jpg)
+
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg" alt="Homepage" width="23%">
+    <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg" alt="Homepage" width="23%">
+    <img src="https://github.com/Syed-Bipul-Rahman/Bdtask-Classes/blob/master/exmple_images/eshop/main.jpg" alt="Homepage" width="23%">
+</div>
 
 
 # E-Commerce App

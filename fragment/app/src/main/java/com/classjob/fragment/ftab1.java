@@ -1,26 +1,25 @@
 package com.classjob.fragment;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ftab1#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class ftab1 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private RecyclerView recyclerView;
+    private ChatAdapter adapter;
+    private List<ChatModel> chatList;
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -28,15 +27,6 @@ public class ftab1 extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ftab1.
-     */
-    // TODO: Rename and change types and number of parameters
     public static ftab1 newInstance(String param1, String param2) {
         ftab1 fragment = new ftab1();
         Bundle args = new Bundle();
@@ -58,7 +48,35 @@ public class ftab1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ftab1, container, false);
+        View view = inflater.inflate(R.layout.fragment_ftab1, container, false);
+
+        // Initialize RecyclerView
+        recyclerView = view.findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        // Initialize data source
+        chatList = new ArrayList<>();
+
+        // Initialize adapter
+        adapter = new ChatAdapter(getContext(), (ArrayList<ChatModel>) chatList);
+        recyclerView.setAdapter(adapter);
+
+        // Add some initial data
+        chatList.add(new ChatModel(R.drawable.hasina, "Apa", "Missed call", "10:00 AM"));
+        chatList.add(new ChatModel(R.drawable.bipul, "Rakib", "Hello", "12:00 AM"));
+        chatList.add(new ChatModel(R.drawable.imageme, "Nony Das", "Ki obosta", "3:00 AM"));
+        chatList.add(new ChatModel(R.drawable.ic_splash, "Shakil Khan", "Kmn acis", "2:00 AM"));
+        chatList.add(new ChatModel(R.drawable.mylogo, "Shanto choto", "Vai kajta ses", "9:00 AM"));
+
+        // Notify the adapter of the data change
+        adapter.notifyDataSetChanged();
+
+        return view;
+    }
+
+    // Method to add data to the RecyclerView
+    public void addData(ChatModel chatModel) {
+        chatList.add(chatModel);
+        adapter.notifyItemInserted(chatList.size() - 1); // Notify adapter of the new item
     }
 }
